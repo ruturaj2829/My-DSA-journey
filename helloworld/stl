@@ -1,0 +1,5 @@
+a.size()
+a.front
+a.back
+a.empty
+a.at
