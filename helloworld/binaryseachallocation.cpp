@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+
 using namespace std;
 bool ispossible(int arr[],int n,int m,int mid){
 
@@ -14,8 +14,9 @@ for(int i=0;i<n;i++){
     else{
 
     studentcount++;
-    if (studentcount>m || arr[i]> mid)return -1;
-    pagesum=arr[i];
+    if (studentcount>m || arr[i]> mid)
+    {return false ;}
+             pagesum=arr[i];
     }
 }
 return true;
@@ -26,7 +27,7 @@ int bookallocate(int arr[] ,int n,int m){
     for(int i =0;i<n;i++){
         sum+=arr[i];
     }
-    sum;
+   
     int e = sum;
      int ans=-1;
     int mid = s + (e-s)/2;
@@ -48,7 +49,7 @@ int bookallocate(int arr[] ,int n,int m){
 }
 int main(){
 int n = 4; int m= 2;
-int pages[4]={111,112,113,114 };
+int pages[4]={10,20,30,40 };
 
 cout<< "The minimum value of the maximum number of pages in book allocation is"<< bookallocate(pages,4,2) << endl;
 
