@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "iostream": "cpp",
-        "ostream": "cpp",
-        "numbers": "cpp"
-    },
-    "workbench.panel.defaultLocation": "right"
-}
