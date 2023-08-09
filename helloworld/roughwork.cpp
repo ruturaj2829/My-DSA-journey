@@ -1,55 +1,31 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-bool ispossible(int arr[],int n,int m,int mid)
-{
-    int student=1;
-    int pagecount=0;
+void printarray(int arr[], int n){
     for(int i=0;i<n;i++){
-    if(pagecount+arr[i]<=mid)
-    {
-        pagecount=pagecount+arr[i];
+        cout<<arr[i]<<",";
+       
     }
-    else{
-        student++;
-        if(student>m  || arr[i]>mid)
-        {
-            return false;
-        }
-
-      }
-    }
-    return true;
 }
-int allocation(int arr[],int n,int m)
-{   
-    int s=0;
-    int sum=0;
-    for(int i=0;i<=n;i++)
-    {
-        sum=sum+arr[i];
+void insertsort(int arr[],int n){
+    int i,j,key;
+    for(i=1;i<n;i++){
+        key=arr[i];
+  j = i - 1;
+  while(j>=0 && arr[j]>key){
+    arr[j+1]= arr[j];
+    j = j -1 ;
+  }
+  arr[j+1]= key;
     }
-    int e=sum;
-    int ans=-1;
-    int mid=s+(e-s)/2;
-    while(s<=e)
-    {
-        if(ispossible(arr,n,m,mid))
-        {
-            ans=mid;
-            e=mid-1;
-        }
-        else{
-            s=mid+1;
-        }
-        mid=s+(e-s)/2;
-    }
-    return ans;
-
 }
-int main()
-{
-    int arr[4]={10,20,30,40};
-    cout<<allocation(arr,4,2);
+int main(){
+    int arr[5]={6,2,8,4,10};
+    int n = sizeof(arr)/sizeof(arr[0]);
+   insertsort(arr,n);
+    cout<<"sorted array"<<endl;
+    printarray(arr,n);
+
+
+
     return 0;
-    
 }
