@@ -6,6 +6,7 @@ bool ispossible(vector<int> &stalls,int k,int mid){
 int cowcount = 1;
 int lastpos = stalls[0];
 for(int i = 0;i<stalls.size();i++){
+    
     if(stalls[i]-lastpos>=mid){
         cowcount++;
         if(cowcount==k){
