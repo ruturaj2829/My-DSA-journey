@@ -1,27 +1,27 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
-void printArray(int arr[], int n)
+void insertionsort(int arr[], int n)
 {
-    int i;
-    for (i = 0; i < n; i++) {
-        cout << arr[i] << " ";
-        cout << endl;
-    }
+  int i,j ;
+  for(i=0;i<n;i++){ 
+
+
+     j = i;
+     while(j > 0 && arr[j-1] > arr[j]){
+
+            swap(arr[j-1],arr[j]);
+            j--;
+
+     }
+  }
 }
-void insertionsort(int arr[],int n){
-    int i,j , element;
-    for(i=1;i<n;i++){
-        element = arr[i];
-        j = i - 1 ;
-        while(j>=0 && arr[j]>element){
-                arr[j+1] = arr[j];
-                j = j - 1 ;
+void printarray(int arr[],int n){
 
-        }
-        arr[j+1] = element ;
-    }
+   for(int i = 0 ; i<n;i++){
+     cout<<arr[i]<<" ";
 
+   }
 }
 int main()
 {
@@ -29,7 +29,7 @@ int main()
     int N = sizeof(arr) / sizeof(arr[0]);
  
     insertionsort(arr, N);
-    printArray(arr, N);
+    printarray(arr, N);
  
     return 0;
 }
