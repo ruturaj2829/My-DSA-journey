@@ -48,8 +48,8 @@ int bookallocate(int arr[] ,int n,int m){
  return ans;
 }
 int main(){
-int n = 4; int m= 2;
-int pages[4]={5,5,5,5 };
+int n = 3; int m= 5;
+int pages[5]={1,2,2,3,1 };
 
 cout<< "The minimum value of the maximum number of pages in book allocation is"<< bookallocate(pages,4,2) << endl;
 
