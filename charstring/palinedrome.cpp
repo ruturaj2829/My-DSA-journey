@@ -15,7 +15,7 @@ for (int i = 0; i < length / 2;i++) {
 int main() {
 	
 	// Example string.
-	string s = "M";
+	string s = "Madam";
 	cout<<isPalindrome(s);
 	cout<<endl;
 	return 0;

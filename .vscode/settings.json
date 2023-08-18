@@ -3,7 +3,11 @@
         "vector": "cpp",
         "iosfwd": "cpp",
         "ostream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "bitset": "cpp",
+        "algorithm": "cpp",
+        "format": "cpp",
+        "spiral": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

@@ -1,6 +1,6 @@
 #include <iostream>
 using  namespace std;
-void fun(int a[]) {
+void fun(int *a) {
     cout << a[0] << " ";
 }
 int main(){
