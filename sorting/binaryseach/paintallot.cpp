@@ -9,7 +9,7 @@ bool ispossible(int arr[],int k,int n,int mid){
         }
         else{
             painter++;
-            if(painter>k || arr[i]>mid){
+            if(painter > k || arr[i] > mid){
                 return false ;
             }
             painter = arr[i];
