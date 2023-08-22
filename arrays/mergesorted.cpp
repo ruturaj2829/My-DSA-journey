@@ -11,13 +11,12 @@ vector<int> ninjaAndSortedArrays(vector<int>& arr1, vector<int>& arr2, int m, in
         if (arr1[i] < arr2[j]) {
             temp.push_back(arr1[i]);
             i++;
-        } else if (arr1[i] == arr2[j]) {
+        } else if (arr1[i] > arr2[j]) {
             temp.push_back(arr2[j]);
+            j++;
+        } else { // When arr1[i] == arr2[j]
             temp.push_back(arr1[i]);
             i++;
-            j++;
-        } else {
-            temp.push_back(arr2[j]);
             j++;
         }
     }
@@ -35,7 +34,6 @@ vector<int> ninjaAndSortedArrays(vector<int>& arr1, vector<int>& arr2, int m, in
     return temp;
 }
 
-
 int main() {
     vector<int> arr1 = {1, 3, 5, 7};
     vector<int> arr2 = {2, 4, 6, 8};
@@ -44,9 +42,9 @@ int main() {
 
     vector<int> merged = ninjaAndSortedArrays(arr1, arr2, m, n);
 
-   for(int i=0; i < temp.size(); i++){
-   std::cout << temp.at(i) << ' ';
-}
+    for(int i = 0; i < merged.size(); i++){
+        std::cout << merged.at(i) << ' ';
+    }
 
     return 0;
 }
