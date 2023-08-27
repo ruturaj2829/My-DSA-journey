@@ -14,7 +14,7 @@ int main(){
 
     int n;
     cin>>n;
-   cout 4<< fib(n);
+   cout << fib(n);
 
 
     return 0;
