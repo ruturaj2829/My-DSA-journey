@@ -25,7 +25,7 @@ vector<vector<int>> permute(vector<int>& nums) {
 }
 
 int main() {
-    vector<int> nums = {1, 2, 3,6,8,9};
+    vector<int> nums = {1, 2, 3};
     vector<vector<int>> permutations = permute(nums);
 
     for (const auto& perm : permutations) {
